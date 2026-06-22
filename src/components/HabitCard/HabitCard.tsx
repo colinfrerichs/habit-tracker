@@ -1,4 +1,5 @@
 import { todayString } from "../../utils/utils";
+import { calculateHabitStreak } from "../../habits/streaks";
 
 import { type Habit } from "../../habits/types";
 
@@ -17,6 +18,7 @@ const HabitCard = ({
 }) => {
   const { id, title, completedDates } = habit;
   const completedToday = completedDates.includes(todayString());
+  const streak = calculateHabitStreak(habit);
 
   return (
     <div className={`habit-card ${completedToday ? "habit-card--done" : ""}`}>
@@ -27,6 +29,7 @@ const HabitCard = ({
         type="text"
         value={title}
       />
+      <p>Streak: {streak} {streak === 1 ? "day" : "days"}</p>
       <input
         type="checkbox"
         checked={completedToday}
