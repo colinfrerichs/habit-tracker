@@ -1,0 +1,92 @@
+:root {
+  --bg: #1a1d21;
+  --surface: #232730;
+  --surface-hover: #2a2f3a;
+  --border: #353b47;
+  --text: #e4e6eb;
+  --text-dim: #8b919e;
+  --accent: #6fcf97;
+  --accent-dim: #3f5d4d;
+  --danger: #e07a7a;
+
+  --font-mono:
+    "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo,
+    Consolas, monospace;
+
+  --radius: 6px;
+  --gap: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.container::before {
+  content: "habits@local";
+  display: block;
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.streak-container {
+  margin-bottom: 24px;
+}
+
+.habits-container {
+  margin-bottom: 20px;
+}
+
+.container > button {
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 10px 16px;
+  width: 100%;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.container > button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.container > button::before {
+  content: "+ ";
+}
+
+.container > button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container > button {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 32px 16px;
+  }
+}

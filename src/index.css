@@ -1,0 +1,98 @@
+/* =========================
+   Modern CSS Reset
+   ========================= */
+
+/* 1. Remove default spacing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Set core defaults */
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Make media elements easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 4. Form elements inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 5. Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 6. Anchor defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7. Button reset */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 8. Improve accessibility focus handling */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* 9. Remove built-in quotes styling */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+/* 10. Table reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
