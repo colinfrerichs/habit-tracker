@@ -20,7 +20,7 @@ export const useHabits = () => {
     }, [habits]);
 
     const addHabit = () => {
-        const newHabit = { id: uuidv4(), title: DEFAULT_HABIT_TITLE, completedDates: [] }
+        const newHabit = { id: uuidv4(), title: DEFAULT_HABIT_TITLE, createdAt: new Date().toISOString(), completedDates: [] }
         setHabits((prev) => {
             if (isDuplicateHabit(prev, newHabit)) return prev;
 
@@ -63,6 +63,10 @@ export const useHabits = () => {
                     : [ ...habit.completedDates, today ],
             }
         }))
+    }
+
+    const getStreak = () => {
+        
     }
 
     return {

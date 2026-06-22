@@ -1,6 +1,7 @@
 import { useHabits } from "../../habits/useHabits";
 
 import HabitList from "../HabitList/HabitList";
+import Streak from "../Streak/Streak";
 
 import "./Dashboard.css";
 
@@ -10,7 +11,9 @@ const Dashboard = () => {
 
   return (
     <div className="container">
-      <div className="streak-container"></div>
+      <div className="streak-container">
+        <Streak />
+      </div>
       <div className="habits-container">
         <HabitList
           habits={habits}
