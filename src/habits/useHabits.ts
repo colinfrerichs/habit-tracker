@@ -65,10 +65,6 @@ export const useHabits = () => {
         }))
     }
 
-    const getStreak = () => {
-        
-    }
-
     return {
         habits,
         addHabit,
